@@ -48,7 +48,7 @@ class TodoGenerator {
         this.todos.map( (todo, index) => {
             const todoContainer: HTMLElement = document.createElement('li')
             const todoText: HTMLElement= document.createElement('span')
-            todoText.innerHTML = todo.name
+            todoText.innerHTML = todo.name.charAt(0).toUpperCase() + todo.name.slice(1)
 
             const completedButton: HTMLInputElement = document.createElement('input')
             completedButton.className = 'checkbox'
@@ -66,8 +66,9 @@ class TodoGenerator {
 
             if(todo.completed === true ) {
                 todoText.style.textDecoration = 'line-through'
+                todoContainer.className = 'completed'
                 completedButton.checked = true
-            } 
+            }
 
             todoContainer.appendChild(completedButton)
             todoContainer.appendChild(todoText)
@@ -75,8 +76,6 @@ class TodoGenerator {
             todoList.appendChild(todoContainer)
         })
         this.root.appendChild(todoList)
-
-
     }
 
     addTodo(todo: TodoItemInterface) {
