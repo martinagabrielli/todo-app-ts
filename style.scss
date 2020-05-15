@@ -31,15 +31,27 @@
                 li {
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
                     padding: .5em;
+                    border: 1px solid #555;
+                    border-radius: 5px;
+                    margin-bottom: .5em;
+                    min-width: 200px;
+                    &.completed {
+                        opacity: 0.5;
+                    }
                     input.checkbox {
                         zoom: 1.5;
                     }
                     span {
                         padding: 0 .5em;
+                        flex: 2;
+
                     }
                     button.delete {
-                        
+                        background: #e14d4d;
+                        border-radius: 5px;
+                        color: #ffffff;
                     }
                 }
             }
