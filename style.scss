@@ -40,8 +40,10 @@
                     &.completed {
                         opacity: 0.5;
                     }
-                    input.checkbox {
-                        zoom: 1.5;
+                    input {
+                        &.checkbox {
+                            zoom: 1.5;
+                        }
                     }
                     span {
                         padding: 0 .5em;
